@@ -5,33 +5,99 @@ body {
   padding: 0;
 }
 body {
-  background: rgb(94, 18, 18);
+  /* background: rgb(94, 18, 18);
   background: linear-gradient(
     135deg,
     rgba(94, 18, 18, 1) 0%,
     rgba(31, 8, 8, 1) 42%,
     rgba(10, 2, 2, 1) 100%
-  );
+  ); */
+  background-image: url("./smoke_1.jpg");
   background-size: cover;
+  background-position: bottom;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 
 .content {
   max-width: 500px;
-  padding: 0 24px;
+  padding: 0 46px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 
 .content img {
+  margin-top: 60px;
   max-width: 100%;
 }
 
-.content p {
+@media (min-width: 768px) {
+  .content img {
+    margin-top: 0;
+  }
+}
+
+.ribbon-container {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  transform: scale(90%);
+}
+
+@media (min-width: 768px) {
+  .ribbon-container {
+    transform: scale(100%);
+  }
+}
+
+@media (min-width: 1280px) {
+  .ribbon-container {
+    transform: scale(110%);
+  }
+}
+
+.ribbon-container p {
   color: #ffffff;
-  font-size: 32px;
   text-align: center;
-  font-family: "Lato", serif;
+  font-family: "Lato", sans-serif;
   font-style: italic;
+  font-weight: 900;
+  text-transform: uppercase;
+  text-shadow: #000000 1px 2px 2px;
+}
+
+.ribbon-container p:first-of-type {
+  font-size: 46px;
+  margin-bottom: 0px;
+}
+
+.ribbon-container p:nth-of-type(2) {
+  margin-top: 4px;
+  font-size: 22px;
+  color: #000000;
+}
+
+.ribbon-container .ribbon-text {
+  transform: rotate(-5deg);
+  position: absolute;
+  width: max-content;
+  top: 90px;
+}
+
+.ribbon {
+  position: absolute;
+  width: 200px;
+  height: 400px;
+  margin-top: -140px;
+  transform: skewY(-10deg);
+  background-color: #dc100f;
+}
+
+.footer p {
+  color: #ffffff;
+  font-family: "Raleway", serif;
+  opacity: 0.7;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 2px 2px;
 }
